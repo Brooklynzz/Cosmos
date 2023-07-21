@@ -1,6 +1,7 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import { ReactElement, SetStateAction, createContext, useState } from 'react'
 import Home from './components/Home';
+import Message from './components/Message';
 
 interface AppProps {
   language: "pt-BR" | "en-US",
@@ -23,19 +24,20 @@ export const LanguageProvider = (props: AppProps) => {
   )
 }
 
-function App() {
+
+const App: React.FC = () => {
   return (
     <LanguageProvider language={'pt-BR'}>
       <div>
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Home></Home>}></Route>
-              <Route path="/message" element={<h1>Teste 2</h1>}></Route>
+              <Route path="/message" element={<Message></Message>}></Route>
             </Routes>
           </BrowserRouter>
       </div>
     </LanguageProvider>
-  )
+  );
 }
 
 export default App

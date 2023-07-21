@@ -1,12 +1,26 @@
 import { Main, UInput, FootNote, Button } from "./style";
+import { ChangeEventHandler, useState } from "react";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 
 const Home = () => {
+    const [userInput, setUserInput] = useState("")
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setUserInput(event.target.value);
+    }
+
+    const navigate = useNavigate()
+
+    const handleSendMessage = () => {
+        navigate(`/message?message=${encodeURIComponent(userInput)}`);
+    }
+
     return (
         <>
             <Main>
                 <p>Qual a sua mensagem pro cosmos hoje?</p>
-                <UInput></UInput>
-                <Button>Enviar</Button>
+                <UInput value={userInput} onChange={handleInputChange}></UInput>
+                <Button onClick={handleSendMessage}>Enviar</Button>
             </Main>
             <FootNote>COSMOS</FootNote>
         </>
