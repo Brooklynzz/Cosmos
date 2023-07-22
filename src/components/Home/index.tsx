@@ -1,6 +1,6 @@
 import { Main, UInput, FootNote, Button } from "./style";
-import { ChangeEventHandler, useState } from "react";
-import { Link, useNavigate, Navigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
     const [userInput, setUserInput] = useState("")
