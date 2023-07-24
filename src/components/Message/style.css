@@ -1,0 +1,10 @@
+.polaroid-bg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.polaroid-bg img {
+    background-color: rebeccapurple;
+}

@@ -23,10 +23,25 @@ export const Polaroid = styled.div `
         margin: 15px 10px;
     }
 
-    img {
+    div {
         border-radius: 5px;
         width: 550px;
         height: 650px;
         box-shadow: 0 0 3px #000;
     }
 `
+export const DownloadButton = styled.button `
+    font-family: 'Julius Sans One', sans-serif;
+    background: none;
+    height: 50px;
+    width: 200px;
+    margin-top: 2%;
+    font-weight: bold;
+
+    &:hover {
+        background-color: #000;
+        color: #FFF;
+        cursor: pointer;
+        transition: 1s
+    }
+`;

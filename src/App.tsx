@@ -1,5 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import { ReactElement, SetStateAction, createContext, useState } from 'react'
+import { ReactElement, createContext, useState } from 'react'
 import Home from './components/Home';
 import Message from './components/Message';
 
