@@ -13,6 +13,19 @@ export const Main = styled.div `
     }
 `;
 
+export const Language = styled.div `
+    font-family: 'Julius Sans One', sans-serif;
+    border-bottom: 1px solid #000;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+`;
+
 export const UInput = styled.input `
     width: 100%;
     outline: none;

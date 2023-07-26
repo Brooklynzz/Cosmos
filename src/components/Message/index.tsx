@@ -21,26 +21,12 @@ const Message: React.FC = () => {
     }
     fetchData()
 
-    console.log(data)
-    const componentRef = useRef<HTMLDivElement | null>(null);
-
-    const downloadPolaroid = () => {
-        useCORS: true
-        
-        html2canvas(componentRef.current!).then(function (canvas) {
-            const link = document.createElement('a');
-            link.download = 'polaroid.png';
-            link.href = canvas.toDataURL('image/png').replace('image/png', 'image/octet-stream');
-            link.click();
-        });
-    };
-
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
     const message = searchParams.get("message");
 
     return (
-        <div className="polaroid-bg" ref={componentRef}>
+        <div className="polaroid-bg">
             <Polaroid>
                 {data && data.url !== undefined ? (
                     <>
@@ -51,7 +37,6 @@ const Message: React.FC = () => {
                     <p>Carregando...</p>
                 )}
             </Polaroid>
-            <DownloadButton onClick={downloadPolaroid}>download</DownloadButton>
         </div>
     )
 }
