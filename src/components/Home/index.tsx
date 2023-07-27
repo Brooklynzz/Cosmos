@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { LanguageContext } from "../../App";
 
 const Home = () => {
-    const { language, updateLanguage } = useContext(LanguageContext);
+    const { language, updateLanguage } = useContext(LanguageContext) ?? { language: 'pt-br', updateLanguage: () => {} };
 
     const [userInput, setUserInput] = useState("")
 

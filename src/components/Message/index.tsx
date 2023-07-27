@@ -1,9 +1,8 @@
 import { useLocation } from "react-router";
-import { useEffect, useState, useRef } from "react";
-import { Polaroid, DownloadButton } from './style'
+import { useEffect, useState } from "react";
+import { Polaroid } from './style'
 import "./style.css"
 import axios from "axios";
-import html2canvas from "html2canvas";
 
 const Message: React.FC = () => {
     const [data, setData] = useState<any>(null);
